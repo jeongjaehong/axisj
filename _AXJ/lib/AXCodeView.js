@@ -33,7 +33,7 @@ var AXCodeView = Class.create(AXJ, {
 			var po = [];
 			po.push("<div class='AXCodeViewer' id='AXCodeViewerContainer'>");
 			po.push("<a href='http://www.axisj.com' target='_blank' style='font-size:12px;font-family:Consolas;text-shadow:0px 0px 5px #444;'>AXISJ.com</a>&nbsp;&nbsp;&nbsp;");
-			po.push('<select name="myTheme" id="myThemeSelector" class="AXSelect"><option value="arongi">arongi</option><option value="default">default</option><option value="bulldog">bulldog</option></select>&nbsp;');
+			po.push('<select name="myTheme" id="myThemeSelector" class="AXSelect"><option value="default">default</option><option value="bulldog">bulldog</option></select>&nbsp;');
 			po.push("<input type='button' value='Menu' class='AXButton Classic' id='AXCodeViewerMenu'>&nbsp;");
 			
 			po.push("<input type='button' value='소스보기' class='AXButton Classic' id='AXCodeViewerButton'>");
@@ -45,7 +45,7 @@ var AXCodeView = Class.create(AXJ, {
 			jQuery("#myThemeSelector").bind("change", this.changeTheme.bind(this));
 			
 			if(AXISTHEME != "" && AXISTHEME != "null"){
-				if(AXISTHEME != "arongi"){
+				if(AXISTHEME != "default"){
 					mask.open();
 					var changeTheme = this.changeTheme.bind(this);
 					setTimeout(function(){
